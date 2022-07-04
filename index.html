@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div id="display">
+            <p id="actual-number"></p>
+            <p id="last-number"></p>
+        </div>
+        <div id="btn-container">
+            <button onclick="clearAll()" class="double-btn">CA</button>
+            <button onclick="simpleClear()" class="single-btn">C</button>
+            <button onclick="operation('/')" class="single-btn">/</button>
+            <button onclick="number('7')" class="single-btn">7</button>
+            <button onclick="number('8')" class="single-btn">8</button>
+            <button onclick="number('9')" class="single-btn">9</button>
+            <button onclick="operation('*')" class="single-btn">*</button>
+            <button onclick="number('4')" class="single-btn">4</button>
+            <button onclick="number('5')" class="single-btn">5</button>
+            <button onclick="number('6')" class="single-btn">6</button>
+            <button onclick="operation('-')" class="single-btn">-</button>
+            <button onclick="number('1')" class="single-btn">1</button>
+            <button onclick="number('2')" class="single-btn">2</button>
+            <button onclick="number('3')" class="single-btn">3</button>
+            <button onclick="operation('+')" class="single-btn">+</button>
+            <button onclick="number('0')" class="single-btn">0</button>
+            <button onclick="number('.')" class="single-btn">.</button>
+            <button onclick="submit()" class="double-btn">=</button>
+        </div>
+    </main>
+</body>
+</html>
