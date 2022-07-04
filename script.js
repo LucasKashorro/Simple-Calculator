@@ -3,18 +3,18 @@ let lastNumber = document.getElementById('last-number');
 
 let equationOperation;
 let result;
-let lastNumberCaracter;
+let lastNumberCharacters;
 
-let maxCaracter = 15
+let maxCharacters = 15
 
 function number(n) {
     let newActualNumber = actualNumber.innerHTML + n
-    actualNumber.innerHTML = newActualNumber.substring(0, maxCaracter)
+    actualNumber.innerHTML = newActualNumber.substring(0, maxCharacters)
 }
 
 function operation(op) {
     lastNumber.innerHTML = actualNumber.innerHTML + ' ' + op
-    lastNumberCaracter = actualNumber.innerHTML
+    lastNumberCharacters = actualNumber.innerHTML
     actualNumber.innerHTML = ''
     equationOperation = op;
     return equationOperation 
@@ -24,19 +24,19 @@ function submit() {
     lastNumber.innerHTML = ''
 
     if(equationOperation === '+') {
-        actualNumber.innerHTML = parseFloat(lastNumberCaracter) + parseFloat(actualNumber.innerHTML)
+        actualNumber.innerHTML = parseFloat(lastNumberCharacters) + parseFloat(actualNumber.innerHTML)
     } else if(equationOperation === '-') {
-        actualNumber.innerHTML = parseFloat(lastNumberCaracter) - parseFloat(actualNumber.innerHTML)
+        actualNumber.innerHTML = parseFloat(lastNumberCharacters) - parseFloat(actualNumber.innerHTML)
     } else if(equationOperation === '*') {
-        actualNumber.innerHTML = parseFloat(lastNumberCaracter) * parseFloat(actualNumber.innerHTML)
+        actualNumber.innerHTML = parseFloat(lastNumberCharacters) * parseFloat(actualNumber.innerHTML)
     } else if(equationOperation === '/') {
-        actualNumber.innerHTML = parseFloat(lastNumberCaracter) / parseFloat(actualNumber.innerHTML)
+        actualNumber.innerHTML = parseFloat(lastNumberCharacters) / parseFloat(actualNumber.innerHTML)
     }
 }
 
 function clearAll() {
     equationOperation = ''
-    lastNumberCaracter = ''
+    lastNumberCharacters = ''
     lastNumber.innerHTML = ''
     actualNumber.innerHTML = ''
 }
